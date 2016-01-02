@@ -14,11 +14,31 @@
         </p>
         <ul>
             <li>
-                <h2>APIs</h2>
+                <h2>
+                    <a name="apis" href="#apis">
+                        APIs
+                    </a>
+                </h2>
                 <ul>
                     <li>
                         <h3>
-                            <a name="apis-purpose">
+                            <a name="apis-documentation" href="#apis-documentation">
+                                Documentation
+                            </a>
+                        </h3>
+                        <p>
+                            The best tool I've ever used for API documentation is <a href="http://swagger.io/">Swagger</a>. The Swagger team has written adapters for all of the popular languages a programmer can choose from to implement an API, which will generate a JSON file to define the request and response contracts. This file is then read by the Swagger UI to give API consumers an interactive way to comprehend the expectations of the API.
+                        </p>
+                        <p>
+                            Swagger is a very mature tool, which takes a lot of the guess work out of generating API documentation. Because Swagger outputs a JSON file, it is possible to write APIs in different languages yet show their documentation on one page by combining the output JSON file. This is a pretty compelling feature that allows microservices to be written in whichever language suits the business requirements.
+                        </p>
+                        <p>
+                            The disadvantage I've seen with Swagger is actually a disadvantage inherent to all API documentation tools I've ever used. It is extremely difficult from both an API producer and a consumer to clearly define all of the edge cases and exceptions an API may produce. It is nearly impossible even from a conceptual level to enumerate all of the exceptions a single API call may produce. The multitude of different methodologies and patterns that developers can use when defining the handling of the API call also makes it difficult to standardize on one way to communicate errors. This disadvantage is a problem in every API I've ever worked with, and seems to be a problem without a possible solution.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a name="apis-purpose" href="#apis-purpose">
                                 Purpose
                             </a>
                         </h3>
@@ -28,7 +48,7 @@
                     </li>
                     <li>
                         <h3>
-                            <a name="apis-service-level-agreements">
+                            <a name="apis-service-level-agreements" href="#apis-service-level-agreements">
                                 Service Level Agreements (SLAs)
                             </a>
                         </h3>
@@ -39,16 +59,56 @@
                 </ul>
             </li>
             <li>
-                <h2>Architecture</h2>
-                <ul>
-                </ul>
-            </li>
-            <li>
-                <h2>JavaScript</h2>
+                <h2>
+                    <a name="architecture" href="#architecture">
+                        Architecture
+                    </a>
+                </h2>
                 <ul>
                     <li>
                         <h3>
-                            <a name="javascript-purpose">
+                            <a name="architecture-magic" href="#architecture-magic">
+                                Magic
+                            </a>
+                        </h3>
+                        <p>
+                            Magic in architecture should be avoided. What I mean by magic is inexplicable features which violate the expectations communicated to developers. AngularJS is a big proponent of magic architecture, which leads developers to spend more time trying to understanding AngularJS's magic rather than trying to understand JavaScript as a language.
+                        </p>
+                        <p>
+                            Magic violates our internal notion <a href="#life-consistency">of consistency with expectations.</a> Many developers assigned to supporting legacy applications have found that they either need to quickly learn the magic fixes they can perform on an application which make no logic sense or they can hand in their two week's notice to find another job. Jobs have been lost over magic. Fortunes have been made and lost over magic. If creating a simple and maintainable architecture is important, then keeping as much magic out of it as necessary should be a high goal.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a name="architecture-simplicity" href="#architecture-simplicity">
+                                Simplicity
+                            </a>
+                        </h3>
+                        <p>
+                            There are some subtle nuances of simplicity in architecture that make it slightly different than <a href="#life-simplicity">simplicity in life.</a> Architectural simplicity is less of a destination and more of a process. Architects should focus on building a complex system by composing it of parts whose complexity decreases the farther it is from the center of the application.
+                        </p>
+                        <p>
+                            Truly effective architects are the ones who can take a problem, boil it down to the smallest pieces necessary, and produce an answer which both solves the original problem as well as offers the maximum sane reuse.
+                        </p>
+                        <p>
+                            There are generally two outcomes when an architecture is incorrect. An under-architected system is so tightly defined that new features are too broad to be added, and misses solving the original problem. An over-architected system is so generic that new features are so specific that they are expensive to add, and also misses solving the original problem. Defining an architecture that allows features to grow in an organic and sustainable way while still solving the original problem at hand is the sweet spot for architectural simplicity.
+                        </p>
+                        <p>
+                            I often use the concept of a car to describe simple architecture. Designers of cars compose a very complex system out of small pieces that by themselves are easy to understand while still working together through a well defined interface to solve the problem of locomotion. An over-architected car would have focused on the smallest possible pieces of the car, which can be either molecules or atoms or quarks, and mired the work that builders of the car needed to do so much that nothing was produced. An under-architected car would not have focused on reusable pieces with well defined intefaces to the point that responsibilities would have become blurred, and one-off and unreusable pieces would have composed an object that possibly resembled a car.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>
+                    <a name="javascript" href="#javascript">
+                        JavaScript
+                    </a>
+                </h2>
+                <ul>
+                    <li>
+                        <h3>
+                            <a name="javascript-purpose" href="#javascript-purpose">
                                 Purpose
                             </a>
                         </h3>
@@ -59,16 +119,24 @@
                 </ul>
             </li>
             <li>
-                <h2>Java</h2>
+                <h2>
+                    <a name="java" href="#java">
+                        Java
+                    </a>
+                </h2>
                 <ul>
                 </ul>
             </li>
             <li>
-                <h2>Life</h2>
+                <h2>
+                    <a name="life" href="#life">
+                        Life
+                    </a>
+                </h2>
                 <ul>
                     <li>
                         <h3>
-                            <a name="life-communication">
+                            <a name="life-communication" href="#life-communication">
                                 Communication
                             </a>
                         </h3>
@@ -79,19 +147,69 @@
                             Communication plays an essential role in every aspect of life. The clearer two parties are in their communication, the less friction between them there will be. The principles of managing expectations and following through with commitments rely heavily on the ability to effectively communicate.
                         </p>
                     </li>
+                    <li>
+                        <h3>
+                            <a name="life-consistency" href="#life-consistency">
+                                Consistency
+                            </a>
+                        </h3>
+                        <p>
+                            Life itself is very inconsistent. There are so many variables that go into every little action a person takes that we've trained our brains to find patterns and consistencies. Thus, there is a subconscious affinity to people or things which are consistent, and likewise a subconsious adversion to people or things which are inconsistent.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a name="life-simplicity" href="#life-simplicity">
+                                Simplicity
+                            </a>
+                        </h3>
+                        <p>
+                            This quote comes pretty close to my feelings on simplicity. It is a quote <a href="http://quoteinvestigator.com/2011/05/13/einstein-simple/">probably by Albert Einstein</a>:
+                        </p>
+                        <blockquote>
+                            Everything should be as simple as it can be, but not simpler.
+                        </blockquote>
+                        <p>
+                            There is a constant struggle between effectiveness and simplicity. If things are made too simple, important nuance is often overlooked which leads to an incorrect understanding. If things are made too complex, it becomes easy to be mired in the unnecessary and miss accomplishing anything. A balance between those two important forces is necessary to achieve anything as well as gain an understanding of the world which is as correct as possible given the nature of our biased perception.
+                        </p>
+                    </li>
                 </ul>
             </li>
             <li>
-                <h2>.NET</h2>
+                <h2>
+                    <a name="dotnet" href="#dotnet">
+                        .NET
+                    </a>
+                </h2>
                 <ul>
                 </ul>
             </li>
             <li>
-                <h2>Node.js</h2>
+                <h2>
+                    <a name="node-js" href="#node-js">
+                        Node.js
+                    </a>
+                </h2>
                 <ul>
                     <li>
                         <h3>
-                            <a name="javascript-node-js-as-an-api">
+                            <a name="node-js-node-js-as-a-ui-development-tool" href="#node-js-node-js-as-a-ui-development-tool">
+                                Node.js as a UI development tool
+                            </a>
+                        </h3>
+                        <p>
+                            JavaScript IDEs are difficult to write and use because of the flexable nature of the language through prototypal inheritance. The menagerie of different ways to create a JavaScript UI application also makes it hard to write one IDE to solve all use cases. The best tool I've seen for UI development is actually Node.js itself.
+                        </p>
+                        <p>
+                            There is nothing inherent to Node.js itself that allows it to be a bona fide UI development tool. Writing JavaScript to help write JavaScript is novel, true, though it is not the reason why Node.js works so well for UI development. Instead, it is the Node.js UI community that makes such a unique tool. There are thousands of UI developers that have latched on to the Node.js platform, and have chosen it as the de facto platform to write tools that make developing quality UI code easier. This phenomenon could have happened in any IDE, even those beguiled IDEs like Eclipse, if the community around those IDEs would have put more time into making tools for UI development a priority.
+                        </p>
+                        <p>
+                            Node.js itself allows for tools to be written on top of it which interact with the JavaScript source code at a system level. Task runners allow developers to hook into scheduling and orchestration of builds. Code quality tools at a command line level allow continuous integration software to hook into metrics they have never had access to until now. Allowing for all of these features through a command line interface makes Node.js the backbone for UI development.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a name="node-js-node-js-as-an-api" href="#node-js-node-js-as-an-api">
                                 Node.js as an API
                             </a>
                         </h3>
@@ -105,17 +223,20 @@
                 </ul>
             </li>
             <li>
-                <h2>Parlance</h2>
+                <h2>
+                    <a name="parlance" href="#parlance">
+                        Parlance
+                    </a>
+                </h2>
                 <ul>
                 </ul>
             </li>
             <li>
-                <h2>PHP</h2>
-                <ul>
-                </ul>
-            </li>
-            <li>
-                <h2>Startups</h2>
+                <h2>
+                    <a name="startups" href="#startups">
+                        Startups
+                    </a>
+                </h2>
                 <ul>
                 </ul>
             </li>
