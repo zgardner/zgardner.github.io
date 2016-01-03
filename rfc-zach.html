@@ -65,6 +65,36 @@
                     </a>
                 </h2>
                 <ul>
+                    
+                    <li>
+                        <h3>
+                            <a name="architecture-life-parallelism" href="#architecture-life-parallelism">
+                                Life Parallelism
+                            </a>
+                        </h3>
+                        <p>
+                            Almost everything we do in architecture has its roots in the physical world. This is because humans are the ones which write software, and existence in the physical world is an essential aspect of the human condition. This parallelism does limit the level of abstraction that can be <a href="#architecture-maintainability">maintainably architected</a> into software, so the limitation should be accounted for.
+                        </p>
+                        <p>
+                            The most important parallel idea between architecture and life is that of <a href="#life-communication">communication.</a> Source code is a communication with two intended recipients: a machine to interpret the code, and a developer who needs to read and understand the intent of the code. A violation of this requirement for <a href="#life-clarity">clear communication</a> is possible as long as it is the most optimal way to achieve the intended goals. Outside of that exception, architects should define an architecture that allows for effective communication with both the machine interpreter as well as the human developer interpreter.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a name="architecture-maintainability" href="#architecture-maintainability">
+                                Maintainability
+                            </a>
+                        </h3>
+                        <p>
+                            Maintainability in software architecture is a function of several different aspects of the software development lifecycle. If software is architected in such a way that new features can be added or removed from it while minimizing the impact to code outside of the feature in question, then it has a high degree of maintainability. If the software can given to an operations team for long term support, then it is maintainable. Maintainability has its roots in <a href="#life-sustainability">sustainability</a> as a highly maintainable architecture is one that can be sustained and grown over a long period of time.
+                        </p>
+                        <p>
+                            There are choices, however, that can be made for the sake of maintainability which actually make the software less maintainable. Often these choices come in the form of scope creep or a desire to make the code more generic. By increasing the degree that code is generic, its degree of abstraction also increases, which may make the software harder to comprehend and maintain. I have also seen projects which focus on being generic for maintainability's sake so much so that nothing actually ever gets accomplished. Abstraction with a goal in mind of implemention is maintainable; abstraction for the sake of abstraction is an anti-pattern.
+                        </p>
+                        <p>
+                            A balance then needs to be struck between a desire to fit every purpose, which is unmaintainable, and filling the needs at hand, which can be so specific that it hinders the ability to reuse code. A clear goal should be set by the architects which constrains the upper bounds of support for a project. This goal should be high enough to allow for growth, yet placed low enough that it will become clear when the current architecture does not meet future needs and becomes unmaintainable. I can't find the original citation, but I remember reading something from IBM that they design their systems to allow for a logarithmic increase before it needs to be architected again. Thus, I believe code that has been architected to allow for 10x its initial constraints is a good goal to set, and will allow for maintainability.
+                        </p>
+                    </li>
                     <li>
                         <h3>
                             <a name="architecture-magic" href="#architecture-magic">
@@ -120,20 +150,24 @@
             </li>
             <li>
                 <h2>
-                    <a name="java" href="#java">
-                        Java
-                    </a>
-                </h2>
-                <ul>
-                </ul>
-            </li>
-            <li>
-                <h2>
                     <a name="life" href="#life">
                         Life
                     </a>
                 </h2>
                 <ul>
+                    <li>
+                        <h3>
+                            <a name="life-clarity" href="#life-clarity">
+                                Clarity
+                            </a>
+                        </h3>
+                        <p>
+                            Being able to <a href="#life-communication">effectively communicate</a> the ways and means to accomplish a goal, as well as the goal itself, requires the communicator to have a clear vision of every step of the process. Breaking down all of the pieces to a puzzle is a difficult task for anyone to accomplish. Clarity is expected from both leaders as well as those being lead.
+                        </p>
+                        <p>
+                            <a href="#life-consistency">Consistency</a> plays a large part in clarity. People have an innate ability to figure out when communication has become inconsistent, which leads to questions on the clarity behind the communication. A well thought out plan that is clear in the mind of the communictor tends to be consistent throughout. There are times when the person receiving the communication does not have enough of a clear vision to see the consistency in the message. If this is the case, then the person doing the communicating should account for it, and present the message in a way that takes into account the biases and perceptions of the person receiving the communication.
+                        </p>
+                    </li>
                     <li>
                         <h3>
                             <a name="life-communication" href="#life-communication">
@@ -159,6 +193,29 @@
                     </li>
                     <li>
                         <h3>
+                            <a name="life-leadership" href="#life-leadership">
+                                Leadership
+                            </a>
+                        </h3>
+                        <p>
+                            There are several, mostly incorrect, ways to view leadership. The only view I've found I can be happy with is the notion of a leader as <a href="#life-servants">a servant to all.</a> Good leaders place those they are responsible for above themselves. They are servants to those that allow them to lead, and in doing so are able to grasp the full responsibility they have been given.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a name="life-servants" href="#life-servants">
+                                Servants
+                            </a>
+                        </h3>
+                        <p>
+                            One of my favorite books as a kid was <a href="https://en.wikipedia.org/wiki/The_Giving_Tree">The Giving Tree.</a> The story goes that a tree so loved a little boy that it slowly gave it everything it had until nothing was left of the tree but an old stump. The boy returned to the tree as an old man, and the tree begged for forgiveness as it had nothing else to give the boy. The boy said that as an old man he didn't need much, just a quiet place to sit and rest. The stump, haven given away everything it had, felt proud that it could straighten up and meet even this last need of the boy.
+                        </p>
+                        <p>
+                            This is what I aspire to be.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
                             <a name="life-simplicity" href="#life-simplicity">
                                 Simplicity
                             </a>
@@ -173,15 +230,41 @@
                             There is a constant struggle between effectiveness and simplicity. If things are made too simple, important nuance is often overlooked which leads to an incorrect understanding. If things are made too complex, it becomes easy to be mired in the unnecessary and miss accomplishing anything. A balance between those two important forces is necessary to achieve anything as well as gain an understanding of the world which is as correct as possible given the nature of our biased perception.
                         </p>
                     </li>
-                </ul>
-            </li>
-            <li>
-                <h2>
-                    <a name="dotnet" href="#dotnet">
-                        .NET
-                    </a>
-                </h2>
-                <ul>
+                    <li>
+                        <h3>
+                            <a name="life-sustainability" href="#life-sustainability">
+                                Sustainability
+                            </a>
+                        </h3>
+                        <p>
+                            There are many different ways that people approach achieving a goal. Some people put all of their cognitive energy and time into achiving it. This single-mindedness can often lead to burn out, or inadvertantly negatively affect relationships with those that they care about. Though this style may lead to the goal being achieved, the consequences of this tunnel vision can be disasterous.
+                        </p>
+                        <p>
+                            There are a few possible causes for people beliving that going all-in is the best way to achieve a goal. The most probable one I've found is that the person in question is thinking in a way that is too short term. They are so focused on achieving the goal that they forget to think through what will happen before, during, and after the goal is met. If any one of these stages is not accounted for in the plan to achieve the goal, negative consequences are bound to follow.
+                        </p>
+                        <p>
+                            Thinking about achieving long term goals leads to thoughts on sustainability. A sustainable approach is one that accounts for every phase of achieving the goal in such a way that negative consequences are minimized while still accomplishing the original goal at hand.
+                        </p>
+                        <p>
+                            Focusing on sustainability means recognizing that work must be done to achieve the goal. Thus, knowing a person's limits is paramount to determining how best to schedule the work. There are some people who enjoy quick bursts of activity followed by a cooling down period to reflect and regroup. There are others who would rather make slow and steady progress every day. Figuring out what works best on a personal level is the key to finding a sustainable way to achieve long term goals.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a name="life-wealth" href="#life-wealth">
+                                Wealth
+                            </a>
+                        </h3>
+                        <p>
+                            Wealth is created when the desires of a person are met or exceeded. The degree of wealth created is proportional to quality of how well the subjective desires have been met. Sometimes these desires are in the form of helping them solve a problem. Other times possessing an object is desireable.
+                        </p>
+                        <p>
+                            Wealth is not money. Money can be a side-effect of wealth. There are other side-effects of wealth, such as the smile of a child that is happy, which are more difficult to quantify yet are still an indication that wealth has been created.
+                        </p>
+                        <p>
+                            Creating wealth for its side effects is a hollow goal. Altruism it not possible, though it is the closest we can come through our subjective experiences to a correct goal of adding wealth.
+                        </p>
+                    </li>
                 </ul>
             </li>
             <li>
@@ -229,6 +312,85 @@
                     </a>
                 </h2>
                 <ul>
+                    <li>
+                        <h3>
+                            <a name="parlance-but" href="#parlance-but">
+                                But
+                            </a>
+                        </h3>
+                        <p>
+                            Things said before the "but" tend to matter very little in comparison with what is said after. Avoid trivializing the audience by limiting the use of "but" to situations where it makes more stylistic or linguistic sense than alternatives.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a name="parlance-not" href="#parlance-not">
+                                Not
+                            </a>
+                        </h3>
+                        <p>
+                            Using negatives like "not" and "never" should be avoided to ensure <a href="#life-communication">effective communication.</a> People tend to prefer communication centered around positive words. Injecting "not" and "never" gives the communication a negative connotation, which makes the message trying to be communicated less effectively received.
+                        </p>
+                        <p>
+                            Words like "not" and "never" also hinder the <a href="#life-clarity">clarity</a> of the communication. This category of words forces the person receiving the message to flip around pieces of the message from their pure, positive meaning. This process is further complicated when multiple negatives are included in the same sentence.
+                        </p>
+                        <p>
+                            The only time that "not" is allowed is in situations where omitting the word decreases the clarity of the message.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>
+                    <a name="politics" href="#politics">
+                        Politics
+                    </a>
+                </h2>
+                <ul>
+                    <li>
+                        <h3>
+                            <a name="politics-religion" href="#politics-religion">
+                                Religion
+                            </a>
+                        </h3>
+                        <p>
+                            Politics exists in the realm of the physical. Religion is the domain of the spiritual. Thus, these two important facts of the human condition are often incompatible, and should intersect as little as possible.
+                        </p>
+                        <p>
+                            For me, religion defines the behaviors and views I believe are consistent with God's will. Politics is the scope of how humans should interact with each other, and how they should be governed. The goals of these two are disjoint, which is why I have a hard time believing that political laws should be a subset of religious beliefs.
+                        </p>
+                        <p>
+                            One important place of intersection which I do believe is correct is in the spiritual responsibility that the leaders of the government have to those whom they govern. This is different than the notion of spiritual authority that some believe leaders have. I am more in the camp of <a href="#life-leadership">leaders as servants</a> than leaders as bosses. Leaders have a fundamental responsibility to place those that gave them the power to lead above themselves. If that mandate is not being met, the people being lead have a responsibility to either force the leader to fulfill it or elect another leader.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>
+                    <a name="religion" href="#religion">
+                        Religion
+                    </a>
+                </h2>
+                <ul>
+                    <li>
+                        <h3>
+                            <a name="religion-men-without-chests" href="#religion-men-without-chests">
+                                Men Without Chests
+                            </a>
+                        </h3>
+                        <p>
+                            In C.S. Lewis's book <a href="https://en.wikipedia.org/wiki/The_Abolition_of_Man#Men_without_chests:_a_Dystopian_future">The Abolition of Man</a>, he extends the idea of rejecting morality on rational grounds to its ultimate conclusion of a race of humans who are truly not human at all. While I agree with most of what Lewis says, I believe morality itself is the physical expression of a spiritual yearning to be in line with God's will. Attempting to remove this desire can make us inhuman, though removing morality itself is only part of thestory.
+                        </p>
+                        <p>
+                            The analogy of men (and women) without chests is one that characterizes humanity more than Lewis may have realized. To be human means walking a line between the physical and the spiritual. We are creatures that exist in both realms at once. We can only experience the physical, which means we unable to experience the other half of our being. This spiritual hole in our collective chests is the primary motivator for almost all of our actions.
+                        </p>
+                        <p>
+                            The natural implication of the hole is the desire to fill the hole. Every person knows they are incomplete in some manner, and how they choose to try and complete themselves determines a good majority of their actions. Filling the hole through physical means may make the hole feel smaller on a temporary basis; however, the hole is a spiritual hole, so filling it through the physical will be ineffectual.
+                        </p>
+                        <p>
+                            The way I choose to fill the hole in my chest is by <a href="#life-wealth">creating wealth</a> in a <a href="#life-sustainability">sustainable manner</a> by maximizing the talents that were given to me through grace. Those talents are leadership, programming, and teaching.
+                        </p>
+                    </li>
                 </ul>
             </li>
             <li>
@@ -238,6 +400,22 @@
                     </a>
                 </h2>
                 <ul>
+                    <li>
+                        <h3>
+                            <a name="startups-purpose" href="#startups-purpose">
+                                Purpose
+                            </a>
+                        </h3>
+                        <p>
+                            All businesses are able to exist because they receive money to <a href="#life-wealth">create wealth</a> by solving problems. The degree of success a company has is in large part to how effectively it solves the problem as well as the severity of the problem and how much people are willing to pay for them to fix it.
+                        </p>
+                        <p>
+                            Companies that have matured know this subconsciously. Startups, however, seem to have a very difficult time keeping this in mind. They often come up with solutions to problems that no one has, or a problem which is benign enough that people can ignore it without paying money for someone to fix it.
+                        </p>
+                        <p>
+                            Thus, a startup should exist to solve one very painful problem which people will pay money for the startup to solve. Startups should focus on being extremely good at solving just one particular problem. It should be a problem that the founders themselves have. This ensures the startup is able to <a href="#life-clarity">clearly</a> focus on solving the problem before paying customers can help them focus more acutely.
+                        </p>
+                    </li>
                 </ul>
             </li>
         </ul>
