@@ -67,7 +67,45 @@
                     </a>
                 </h2>
                 <ul>
-                    
+                    <li>
+                        <h3>
+                            <a name="architecture-consistency" href="#architecture-consistency">
+                                Consistency
+                            </a>
+                        </h3>
+                        <p>
+                            Consistency in architecture closely mirrors <a href="#life-consistency">consistency in life,</a> and plays a large part in <a href="#architecture-maintainability">maintainability.</a> A consistent architecture is one where developers can be trained in understanding patterns, and see the implementation of those patterns reflected in the code. It is best if the architecture is consistent with best practices and designs outside of the architecture itself which may allow new developers to leverage existing knowledge. It should be required though that the architecture is consistent within itself.
+                        </p>
+                        <p>
+                            Maintaining consistency over time is extremely difficult. New code can be introduced which inadvertantly or maliciously violates the architecture's consistency. This frequently happens when third party libraries are introduced without the architecture team's approval. Thus, at a bare minimum, there should be mechanisms by which the architecture team allows developers to introduce new patterns, concepts, or libraries into the architecture. This is frequently in the form of a Technical Advisory Board. This ensures that the architects can approve or reject changes from a higher vantage point than the developers proposing the changes.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a name="architecture-exceptions" href="#architecture-exceptions">
+                                Exceptions
+                            </a>
+                        </h3>
+                        <p>
+                            To be clear, this opinion deals with exceptions in an architecture's design rather than exceptions that are handled by a try/catch statement. This kind of exception is very close to <a href="#life-exceptions">the life exception.</a>
+                        </p>
+                        <p>
+                            Every exception to an architecture has a cost. New developers have to remember both the patterns as well as times when to break the patterns. This flexability can make developers nervous on if they're breaking the pattern correctly, or if they're taking it too far. What's more often the case is that developers forget the exceptions to the rules, and incorrectly implement the pattern. Or they forget what they're doing is the exception, and proceed to use the exception even when it is not applicable.
+                        </p>
+                        <p>
+                            Exceptions should really only be allowed when they serve consistency at a higher level. The higher up the exception is, the more costly it is. Great discretion should be taken when allowing exceptions in an architecture. If possible, exceptions should be avoided at all costs.
+                        </P
+                    </li>
+                    <li>
+                        <h3>
+                            <a name="architecture-hybrid-approach" href="#architecture-hybrid-approach">
+                                Hybrid Approach
+                            </a>
+                        </h3>
+                        <p>
+                            Most commonly, this phrase is used as a justification when an architect does not want to make a clear decision. See <a href="#architecture-exceptions">exceptions.</a>
+                        </p>
+                    </li>
                     <li>
                         <h3>
                             <a name="architecture-life-parallelism" href="#architecture-life-parallelism">
@@ -112,6 +150,16 @@
                     </li>
                     <li>
                         <h3>
+                            <a name="architecture-security" href="#architecture-security">
+                                Security
+                            </a>
+                        </h3>
+                        <p>
+                            There should be <a href="#architecture-exceptions">no exceptions</a> made in the security model of the architecture. The cost of a security mistake far outweighs any benefit from the exception.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
                             <a name="architecture-simplicity" href="#architecture-simplicity">
                                 Simplicity
                             </a>
@@ -147,6 +195,34 @@
                         <p>
                             JavaScript exists to breathe life into static pages in a way that provides positive value to end users. It allows developers to get so close to the end user's experience that care should be taken to ensure quality code is delivered. A concerted effort should be taken to ensure the negative aspects of JavaScript are not abused, and that maintainable code is the output of all work.
                         </p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a name="javascript-zeitgeist" href="#javascript-zeitgeist">
+                                Zeitgeist
+                            </a>
+                        </h3>
+                        <ul>
+                            <li>
+                                <h4>
+                                    <a name="javascript-zeitgeist-2016" href="#javascript-zeitgeist-2016">
+                                        2016
+                                    </a>
+                                </h3>
+                                <p>
+                                    The current state of JavaScript is as exciting as it is terrifying. JavaScript is finally at a point where it can be considered a viable option for enterprise-level UI applications. It is receiving a tremendous amount of attention from developers across the world. Thousands of people are contributing to Node packages every single day, and working to drive the language forward in new ways I never imagined when I started working with JavaScript in 2005.
+                                </p>
+                                <p>
+                                    There are two primary facets of JavaScript in 2016 that terrify me: JavaScript developers, and JavaScript projects.
+                                </p>
+                                <p>
+                                    JavaScript developers as commonly known for pieceing together discrete plugins and copy/paste StackOverflow code to create web applications that are so fragile they make all of us seem like fools. Dispite what job titles in Silicon Valley may indicate, these people are not "engineers" or really even "developers." They are hackers in every sense of the word. They are not concerned with things like <a href="#architecture-consistency">consistency</a> or <a href="#architecture-maintainability">maintainability.</a> Only with getting a feature out the door fast enough to apease the unrealistic expectations of their manager. The only way to make these hackers into developers is to do something which does not scale: give them your time, and teach them what it really means to be a developer.
+                                </p>
+                                <p>
+                                    JavaScript projects that make me worry are ones that commonly come out of startups, but are also in the category of weekend projets. JavaScript has such a low barrier to entry that it seems like anyone can take an idea, and get a working prototype within a few hours. This low barrier gives JavaScript a lot of its initial appeal, but comes at a price with developers thinking they are business people and trying to create products in the form of a startup. Every time you see a new NPM package rise to the top of Hacker News, ask yourself: what is the name of one human being whose life is improved by this code? In nine times out of 10, the code was written for the sake of being written, and honestly does nothing to better the human condition. The only way to fix this is to also do something that does not scale: give them your time, and show them that reading a book or volunteering is a better way to spend an afternoon than creating the next NodeJS task runner which no one will ever use.
+                                </p>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
@@ -190,7 +266,17 @@
                             </a>
                         </h3>
                         <p>
-                            Life itself is very inconsistent. There are so many variables that go into every little action a person takes that we've trained our brains to find patterns and consistencies. Thus, there is a subconscious affinity to people or things which are consistent, and likewise a subconsious adversion to people or things which are inconsistent.
+                            Life itself is very <a href="#life-exceptions">inconsistent.</a> There are so many variables that go into every little action a person takes that we've trained our brains to find patterns and consistencies. Thus, there is a subconscious affinity to people or things which are consistent, and likewise a subconsious adversion to people or things which are inconsistent.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a name="life-exceptions" href="#life-exceptions">
+                                Exceptions
+                            </a>
+                        </h3>
+                        <p>
+                            Every exception to a rule has a cost associated with it. Sometimes the cost is mental in remembering the exception. Sometimes the cost is material in time spent implementing exceptions. Whatever the case, exceptions should only be allowed at a micro level if they allow goals at a macro level to be more easily achieved. Thus, inconsistency is allowed at a lower level if it achieves a consistecy at a greater level. It is extremely rare that inconsistency at the macro level is correct.
                         </p>
                     </li>
                     <li>
@@ -314,6 +400,19 @@
                     </a>
                 </h2>
                 <ul>
+                    <li>
+                        <h3>
+                            <a name="parlance-abbreviations" href="#parlance-Abbreviations">
+                                Abbreviations
+                            </a>
+                        </h3>
+                        <p>
+                            Abbreviations are a malicious form of <a href="#life-consistency">inconsistent communication.</a> They require the speaker and the listener to have acquired the same parlance outside of the conversation. Thus, there is hte potential that either the listener or a third party listening in does not understand the speaker. The cost of misunderstanding the communication is prohibitively higher than any benefit that comes with using abbreviations.
+                        </p>
+                        <p>
+                            Abbreviations should only be used when the communication between two entites is not critical, or the abbreviation is so common place that the probability of misinterpretation is virtually nothing.
+                        </p>
+                    </li>
                     <li>
                         <h3>
                             <a name="parlance-but" href="#parlance-but">
